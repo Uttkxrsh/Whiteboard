@@ -1,3 +1,5 @@
+require('dotenv').config(); // Load environment variables
+
 const express = require("express");
 const http = require("http");
 const cors = require("cors");
@@ -64,5 +66,5 @@ io.on("connection", (socket) => {
 const PORT = process.env.PORT || 5000;
 
 server.listen(PORT, () =>
-  console.log(`server is listening on http://localhost:${PORT}`)
+  console.log(`Server is listening on http://localhost:${PORT}`)
 );
